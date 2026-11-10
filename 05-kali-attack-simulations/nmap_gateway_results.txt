@@ -1,0 +1,13 @@
+# Nmap 7.99 scan initiated Tue Nov 10 07:46:37 2026 as: /usr/lib/nmap/nmap --privileged -sV -sC -p 80,8080 -oN nmap_gateway_results.txt 172.28.20.10
+Nmap scan report for 172.28.20.10
+Host is up (0.00038s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   open   http       nginx 1.31.2
+|_http-server-header: nginx/1.31.2
+|_http-title: Welcome to nginx!
+8080/tcp closed http-proxy
+MAC Address: 7E:C1:0F:F7:B6:A8 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov 10 07:47:28 2026 -- 1 IP address (1 host up) scanned in 52.47 seconds

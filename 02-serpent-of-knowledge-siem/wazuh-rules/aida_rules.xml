@@ -1,0 +1,11 @@
+<group name="altimit, aida_detection,">
+  <rule id="100501" level="10">
+    <decoded_as>iptables</decoded_as>
+    <match>ALTIMIT_AIDA_ALERT</match>
+    <description>ALTIMIT Kernel Alert: Unauthorized packet traversal blocked from Macabre Rogue Net to Serpent Eye SOC Network.</description>
+    <mitre>
+      <id>T1046</id>
+      <id>T0833</id>
+    </mitre>
+  </rule>
+</group>

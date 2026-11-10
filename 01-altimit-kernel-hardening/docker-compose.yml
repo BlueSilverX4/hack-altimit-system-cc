@@ -1,0 +1,62 @@
+version: '3.8'
+
+networks:
+  # Internal SOC / Observability Network (No Direct External Access)
+  serpent-eye-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.10.0/24
+
+  # Target DMZ Service Network
+  altimit-core-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.20.0/24
+
+  # Isolated Rogue Node / Attack Simulation Network
+  macabre-rogue-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.30.0/24
+
+services:
+  # DMZ Target: System CC Gateway Node
+  system-cc-target:
+    image: nginx:alpine
+    container_name: system_cc_gateway
+    ports:
+      - "8080:80"
+    networks:
+      altimit-core-net:
+        ipv4_address: 172.28.20.10
+      macabre-rogue-net:
+        ipv4_address: 172.28.30.5
+    restart: unless-stopped
+
+  # Monitoring: Serpent of Knowledge Sensor Interface
+  serpent-sensor:
+    image: alpine:latest
+    container_name: serpent_eye_sensor
+    command: sh -c "echo 'Serpent Eye Sensor online...' && tail -f /dev/null"
+    networks:
+      serpent-eye-net:
+        ipv4_address: 172.28.10.5
+      altimit-core-net:
+        ipv4_address: 172.28.20.15
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    restart: unless-stopped
+
+  # Untrusted: Rogue Player Simulation Target Host
+  rogue-player-host:
+    image: alpine:latest
+    container_name: rogue_player_node
+    command: sh -c "echo 'Rogue Node active on Macabre Net...' && tail -f /dev/null"
+    networks:
+      macabre-rogue-net:
+        ipv4_address: 172.28.30.100
+    restart: unless-stopped

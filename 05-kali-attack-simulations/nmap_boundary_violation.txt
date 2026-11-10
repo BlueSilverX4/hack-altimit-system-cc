@@ -1,0 +1,11 @@
+# Nmap 7.99 scan initiated Tue Nov 10 07:47:32 2026 as: /usr/lib/nmap/nmap --privileged -Pn -p 22,80,443 -oN nmap_boundary_violation.txt 172.28.10.5
+Nmap scan report for 172.28.10.5
+Host is up (0.00017s latency).
+
+PORT    STATE  SERVICE
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+MAC Address: 36:B1:D9:87:F0:58 (Unknown)
+
+# Nmap done at Tue Nov 10 07:47:33 2026 -- 1 IP address (1 host up) scanned in 2.57 seconds
